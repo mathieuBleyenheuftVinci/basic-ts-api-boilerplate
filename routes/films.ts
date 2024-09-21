@@ -3,7 +3,7 @@ import {Film} from "../types";
 
 const router = Router();
 
-const films: Film[] = [
+const defaultFilms: Film[] = [
     {
       id: 1,
       title: "Inception",
@@ -34,7 +34,7 @@ const films: Film[] = [
   ];
 
   router.get("/", (_req, res) => {
-    res.json({ films });
+    res.json(defaultFilms);
   });
 
 export default router;
